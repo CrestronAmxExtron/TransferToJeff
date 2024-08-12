@@ -1,0 +1,5 @@
+C:\Users\bungeav\Desktop\Bunge Code\Combined Workspace\Cisco_SX80_CE_Comm_dr1_0_0.jar
+C:\Users\bungeav\Desktop\Bunge Code\Combined Workspace\Samsung_DM82D_Comm_dr1_0_0.jar
+C:\Users\bungeav\Desktop\Bunge Code\Combined Workspace\Surgex_iControl2_dr1_0_0.jar
+C:\Program Files (x86)\Common Files\AMXShare\Duet\bundle\devicesdkrt.jar
+C:\Program Files (x86)\Common Files\AMXShare\Duet\bundle\snapirouter.jar

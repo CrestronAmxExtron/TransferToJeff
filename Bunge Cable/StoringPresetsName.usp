@@ -1,0 +1,22 @@
+#CATEGORY "46" "StoringPresets"
+
+//VARIABLES
+STRING			VCurrentChannel[14][6];
+INTEGER			Temp;
+
+//INPUT
+STRING_INPUT			CurrentChannel[14][6];
+DIGITAL_INPUT			Store;
+
+//OUTPUT
+STRING_OUTPUT			CurrentChannel$[14];
+
+CHANGE CurrentChannel
+{
+	Temp = GetLastModifiedArrayIndex();
+	VCurrentChannel[Temp] = CurrentChannel[Temp];
+}
+PUSH Store
+{
+	CurrentChannel$[Temp] = VCurrentChannel[Temp];
+}

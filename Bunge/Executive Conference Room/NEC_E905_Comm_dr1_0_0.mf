@@ -1,0 +1,57 @@
+#Thu Nov 15 12:00:55 GMT 2018
+Bundle-Vendor=AMX by Harman
+PROPERTY-Has-Brightness=false
+Device-Model=E905,E705,E805
+Bundle-Name=NEC_E905_Comm_dr1_0_0
+Export-Package=com.amx.duet.impl.NEC.E905.dr1_0_0; specification-version\=1.0.1
+PROPERTY-Has-Volume-Ramp=true
+PROPERTY-Has-Menu=false
+Baud_Rate=String,9600,9600
+PROPERTY-Has-Contrast=false
+PROPERTY-Has-Menu-10Key=false
+PROPERTY-Has-Station=false
+PROPERTY-Menu-List=blank
+PROPERTY-Has-PIP-Position-Cycle=true
+PROPERTY-Has-Notes=false
+AMX-Type=Duet
+PROPERTY-Has-Power-Cycle=true
+PROPERTY-Has-Input-Select=true
+Device-Class=com.amx.duet.impl.NEC.E905.dr1_0_0.NECMonitor
+Import-Package=com.amx.duet.devicesdk; specification-version\=1.15.0,com.amx.duet.devicesdk.base; specification-version\=1.15.0,com.amx.duet.devicesdk.component; specification-version\=1.15.0,com.amx.duet.devicesdk.type; specification-version\=1.15.0,org.osgi.service.http; specification-version\=1.1,org.osgi.service.device; specification-version\=1.0.1,com.amx.duet.driver; specification-version\=1.0.1,com.amx.duet.core.osgi; specification-version\=1.0.1,com.amx.duet.da; specification-version\=1.0.2,com.amx.duet.util.metadata; specification-version\=1.0.1,com.amx.duet.util; specification-version\=1.0.1
+PROPERTY-Has-Volume=true
+PROPERTY-Has-Power=true
+Device-SDKClass=com.amx.duet.devicesdk.Monitor
+Device-SDKInterface=com.amx.duet.devicesdk.IMonitor4
+PROPERTY-Has-Freeze-Cycle=false
+Timeout_Count=String,3
+Device-Channels=332
+Router-Service=com.amx.duet.routers.snapi.ISNAPIRouter
+PROPERTY-Lamp-Count=1
+Device-Revision=1.0.0
+PROPERTY-Has-Volume-Mute-Cycle=true
+Poll_Time=Integer,10000,1000..300000
+Device-Levels=32
+PROPERTY-Has-Sharpness=false
+Duet-Firmware-Version=4.8.316
+PROPERTY-Has-Tint=false
+Bundle-Activator=com.amx.duet.impl.NEC.E905.dr1_0_0.Activator
+PROPERTY-Has-Lamp=false
+PROPERTY-Menu-Navigate-List=blank
+File-Dependencies=devicesdkrt.jar; specification-version\=1.15.0,snapirouter.jar; specification-version\=1.15.0
+DynamicImport-Package=*
+PROPERTY-Has-Aspect-Ratio=true
+PROPERTY-Has-Aspect-Ratio-Cycle=true
+Device-Category=serial,rs-232
+PROPERTY-Has-Picture-Mute=false
+PROPERTY-Has-PIP-Cycle=true
+Device-Make=NEC
+Bundle-Copyright=Copyright, Harman International, 2017 All Rights Reserved.
+Device-Interface=com.amx.duet.impl.NEC.E905.dr1_0_0.NECMonitor
+PROPERTY-Has-Input-Select-Cycle=true
+PROPERTY-Has-Picture-Mute-Cycle=false
+Manifest-Version=1.0.0
+Bundle-Version=1.0.1
+PROPERTY-Has-Color=false
+PROPERTY-Has-Menu-Navigate=false
+PROPERTY-Has-PIP=true
+PROPERTY-Has-Freeze=false

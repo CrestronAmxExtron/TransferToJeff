@@ -1,0 +1,80 @@
+#Category "46" "NumericStringDecode"
+#ENABLE_TRACE
+
+//VARIABLES
+STRING			TempString[3];
+//INPUTS
+STRING_Input	StringIn$[5];
+
+//OUTPUTS
+DIGITAL_OUTPUT	Num0,Num1,Num2,Num3,Num4,Num5,Num6,Num7,Num8,Num9,Enter;
+
+CHANGE StringIn$
+{
+	INTEGER Length,P1,P2,P3,P4,P5;
+	STRING Temp1[1],Temp2[1],Temp3[1],Temp4[1];
+	TempString = StringIn$;
+	Length = Len(TempString);
+	IF(Length = 3)
+	{
+		Temp1 = Left(TempString,1);
+		P1 = ATOI(Temp1);
+		Temp2 = Mid(TempString,2,1);
+		P2 = ATOI(Temp2);
+		Temp3 = Right(TempString,1);
+		P3 = ATOI(Temp3);
+		
+		
+	}
+	ELSE IF(Length = 2)
+	{
+		Temp1 = Left(TempString,1);
+		Temp2 = Right(TempString,1);
+		P1 = ATOI(Temp1);
+		DELAY(50);
+		P2 = ATOI(Temp2);
+		
+	}
+	ELSE IF(Length = 1)
+	{
+		Temp1 =TempString;
+		P1 = ATOI(Temp1);	
+	}
+	If(P1 = 0)				{Num0 = 1;	Num0 = 0;}
+	ELSE IF (P1 = 1)		{Num1 = 1;  Num1 = 0;}
+	ELSE IF (P1 = 2)		{Num2 = 1;	Num2 = 0;}
+	ELSE IF (P1 = 3)		{Num3 = 1;  Num3 = 0;}
+	ELSE IF (P1 = 4)		{Num4 = 1;	Num4 = 0;}
+	ELSE IF (P1 = 5) 		{Num5 = 1;  Num5 = 0;}
+	ELSE IF (P1 = 6) 		{Num6 = 1;	Num6 = 0;}
+	ELSE IF (P1 = 7)		{Num7 = 1;	Num7 = 0;}
+	ELSE IF (P1 = 8)		{Num8 = 1;  Num8 = 0;}
+	ELSE IF (P1 = 9)		{Num9 = 1;  Num9 = 0;}
+	DELAY(50);
+	If(P2 = 0)				{Num0 = 1;	Num0 = 0;}
+	ELSE IF (P2 = 1)		{Num1 = 1;  Num1 = 0;}
+	ELSE IF (P2 = 2)		{Num2 = 1;	Num2 = 0;}
+	ELSE IF (P2 = 3)		{Num3 = 1;  Num3 = 0;}
+	ELSE IF (P2 = 4)		{Num4 = 1;	Num4 = 0;}
+	ELSE IF (P2 = 5) 		{Num5 = 1;  Num5 = 0;}
+	ELSE IF (P2 = 6) 		{Num6 = 1;	Num6 = 0;}
+	ELSE IF (P2 = 7)		{Num7 = 1;	Num7 = 0;}
+	ELSE IF (P2 = 8)		{Num8 = 1;  Num8 = 0;}
+	ELSE IF (P2 = 9)		{Num9 = 1;  Num9 = 0;}
+    DELAY(50);
+    If(P3 = 0)				{Num0 = 1;	Num0 = 0;}
+	ELSE IF (P3 = 1)		{Num1 = 1;  Num1 = 0;}
+	ELSE IF (P3 = 2)		{Num2 = 1;	Num2 = 0;}
+	ELSE IF (P3 = 3)		{Num3 = 1;  Num3 = 0;}
+	ELSE IF (P3 = 4)		{Num4 = 1;	Num4 = 0;}
+	ELSE IF (P3 = 5) 		{Num5 = 1;  Num5 = 0;}
+	ELSE IF (P3 = 6) 		{Num6 = 1;	Num6 = 0;}
+	ELSE IF (P3 = 7)		{Num7 = 1;	Num7 = 0;}
+	ELSE IF (P3 = 8)		{Num8 = 1;  Num8 = 0;}
+	ELSE IF (P3 = 9)		{Num9 = 1;  Num9 = 0;}
+	DELAY(50);
+	ENTER = 1;
+	DELAY(50);
+	ENTER = 0;
+
+}

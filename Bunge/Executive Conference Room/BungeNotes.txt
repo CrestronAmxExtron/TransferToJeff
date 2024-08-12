@@ -1,0 +1,5 @@
+IF Laptop plugs in and system off turn system on to that input
+If laptop is presenting and unpluged goes to last laptop plugged in before that
+If no laptop is plugged in starts to clickshare then goes to next laptop plugged in 
+With presenting have a share button but auto routes last plugged in source
+When you start system volue ramps up over 5 seconds to initial settings

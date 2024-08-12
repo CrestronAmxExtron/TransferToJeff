@@ -1,0 +1,5 @@
+C:\Users\bungeav\Desktop\Bunge Code\Cisco_SX80_CE_Comm_dr1_0_0.jar
+C:\Users\bungeav\Desktop\Bunge Code\NEC_E905_Comm_dr1_0_0.jar
+C:\Users\bungeav\Desktop\Bunge Code\Surgex_iControl2_dr1_0_0.jar
+C:\Program Files (x86)\Common Files\AMXShare\Duet\bundle\devicesdkrt.jar
+C:\Program Files (x86)\Common Files\AMXShare\Duet\bundle\snapirouter.jar

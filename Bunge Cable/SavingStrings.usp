@@ -1,0 +1,24 @@
+#CATEGORY "46" "SavingStrings"
+
+//VARIABLE
+STRING		VCurrentString[5];
+
+//INPUTS
+DIGITAL_INPUT		Enter,Num[10];
+
+//OUTPUTS
+STRING_OUTPUT		CurrentString;
+
+PUSH Num
+{
+	Integer Temp;
+	Temp = GetLastModifiedArrayIndex();
+	Temp = Temp - 1;
+	MakeString(VCurrentString,"%s%i",VCurrentString,Temp);
+
+}
+PUSH Enter
+{
+	CurrentString = VCurrentString;
+	VCurrentString = "";
+}

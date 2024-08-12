@@ -1,0 +1,10 @@
+ACTION=remove
+DEVNAME=sda1
+DEVPATH=/devices/platform/fsl-ehci.1/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda1
+umount /mnt/usb-front
+=========================
+ACTION=remove
+DEVNAME=sdb1
+DEVPATH=/devices/platform/fsl-ehci.1/usb2/2-1/2-1.2/2-1.2:1.0/host1/target1:0:0/1:0:0:0/block/sdb/sdb1
+umount /mnt/usb-back
+=========================

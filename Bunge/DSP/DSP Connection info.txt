@@ -1,0 +1,20 @@
+in audio architect, you need to set up static routes in 'application options' in order to connect to the DSPs from the main user network.
+
+10.160.208.xxx
+
+16
+28
+52
+74
+75
+79
+
+231
+232
+233
+235
+
+241
+242
+243
+244

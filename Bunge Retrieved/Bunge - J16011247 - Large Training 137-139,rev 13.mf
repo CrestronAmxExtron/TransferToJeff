@@ -1,0 +1,4 @@
+C:\Users\bungeav\Dropbox\Bunge North America-Bunge World HQ-J16011247\Program\Control Program\Bunge World HQ North America\Cisco_SX80_CE_Comm_dr1_0_0.jar
+C:\Users\bungeav\Dropbox\Bunge North America-Bunge World HQ-J16011247\Program\Control Program\Bunge World HQ North America\Surgex_iControl2_dr1_0_0.jar
+C:\Program Files (x86)\Common Files\AMXShare\Duet\bundle\devicesdkrt.jar
+C:\Program Files (x86)\Common Files\AMXShare\Duet\bundle\snapirouter.jar

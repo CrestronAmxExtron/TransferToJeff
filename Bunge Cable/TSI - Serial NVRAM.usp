@@ -1,0 +1,123 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:	TSI GLOBAL COMPANIES
+System Name:	
+System Number:	
+Programmer:		JEFF PRIDE
+Comments:
+*/
+
+//			Compiler Directives
+// #ENABLE_DYNAMIC
+#SYMBOL_NAME "TSI - Serial NVRAM"
+#CATEGORY "46" "#TSI Modules" // Custom
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+
+
+#DEFINE_CONSTANT	debug				0
+#DEFINE_CONSTANT	MaxStrings			100
+#DEFINE_CONSTANT	MaxStringSize		512
+
+DIGITAL_INPUT	Recall,ClearAll,_skip_;
+STRING_INPUT	In$[MaxStrings][MaxStringSize];
+
+DIGITAL_OUTPUT	InitializationComplete,_skip_,_skip_;
+STRING_OUTPUT 	Out$[MaxStrings];
+
+NONVOLATILE STRING	Vault$[MaxStrings][MaxStringSize];
+INTEGER				lastDefinedSignal;
+integer				internalInitComplete;
+  
+
+Push Recall
+{
+	integer i;
+      
+	For (i = 1 to lastDefinedSignal)
+	{	
+		Out$[i] = Vault$[i];
+	}
+	
+	pulse(1,InitializationComplete);
+
+}
+
+Push ClearAll
+{
+	integer i;
+
+      	for (i = 1 to lastDefinedSignal)
+	{
+		Vault$[i] = "";
+		Out$[i] = "";	
+	}
+
+
+}
+
+
+Threadsafe CHANGE In$
+{
+	integer index,i;
+
+	index = getlastmodifiedarrayindex();
+    
+    if (internalInitComplete)
+    {
+		try
+		{
+			if (Vault$[index] != in$[index])
+			{
+				Vault$[index] = in$[index];
+				Out$[index] = Vault$[index];
+            }
+            
+			if (debug) {  trace("vault[%d]:%s",index,vault$[index]); }
+		}
+		catch
+		{
+			Print("Error: %s",getExceptionMessage());
+		}
+	}				
+
+}	
+
+
+
+
+Function Main()
+{
+	integer	i,c;
+    InitializationComplete = 0;
+    internalInitComplete = 0;
+
+
+    WaitForInitializationComplete();
+    
+    for (c = MaxStrings to 1 Step -1)
+    {
+    	if (isSignalDefined(Out$[c]))
+    	{
+    		lastDefinedSignal = c;
+    		break;
+    	}
+    
+    }
+    
+    
+	for (i = 1 to lastDefinedSignal)
+	{
+		Out$[i] = Vault$[i];
+	}
+
+    pulse(1,InitializationComplete);
+    internalInitComplete = 1;
+    
+}
+
+

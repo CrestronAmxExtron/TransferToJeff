@@ -1,0 +1,14 @@
+<Device Model="CP3N">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="C2N-VEQ4" DeviceId="12"/>
+      <Device Model="CNX-B6" DeviceId="62"/>
+      <Device Model="CNX-B2" DeviceId="64"/>
+      <Device Model="CNX-B2" DeviceId="65"/>
+      <Device Model="CNX-B2" DeviceId="66"/>
+   </Network>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="TSW-1060" DeviceId="03"/>
+      <Device Model="DM-MD8x8" DeviceId="04"/>
+      <Device Model="DM-RMC-100-C" DeviceId="05"/>
+   </Network>
+</Device>

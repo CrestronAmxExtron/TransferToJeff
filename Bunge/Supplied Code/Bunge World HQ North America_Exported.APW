@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace [
+
+<!-- Common Elements -->
+<!ELEMENT Identifier (#PCDATA)>
+<!ELEMENT Comments (#PCDATA)>
+<!ELEMENT MasterDirectory (#PCDATA)>
+<!ELEMENT CreationDate (#PCDATA)>
+
+<!-- Workspace Elements-->
+<!ELEMENT Workspace ( Identifier,
+               CreateVersion,
+               PJS_File?,
+               PJS_ConvertDate?,
+               PJS_CreateDate?,
+               Comments?,
+               Project*)>
+
+<!ATTLIST Workspace 
+      CurrentVersion CDATA   #REQUIRED> 
+
+<!ELEMENT CreateVersion     (#PCDATA)>
+
+
+<!-- Conversion data only: only included for files converted from the old .pjs database -->
+<!ELEMENT PJS_File (#PCDATA)>
+<!ELEMENT PJS_ConvertDate (#PCDATA)>
+<!ELEMENT PJS_CreateDate (#PCDATA)>
+
+<!ELEMENT Project ( Identifier,
+               Designer?,
+               DealerID?,
+               SalesOrder?,
+               PurchaseOrder?,
+               Comments?,
+               System*)>
+
+<!ELEMENT Designer (#PCDATA)>
+<!ELEMENT DealerID (#PCDATA)>
+<!ELEMENT SalesOrder (#PCDATA)>
+<!ELEMENT PurchaseOrder (#PCDATA)>
+
+
+<!ELEMENT System  (  Identifier,
+                 SysID,
+                 TransTCPIP?,
+                 TransSerial?,
+                 TransTCPIPEx?,
+                 TransSerialEx?,
+                 TransUSBEx?,
+                 TransVNMEx?,
+                 VirtualNetLinxMasterFlag?,
+                 VNMSystemID?,
+                 VNMIPAddress?,
+                 VNMMaskAddress?,
+                 UserName?,
+                 Password?,
+                 Comments?,
+                 File*)>
+
+<!ATTLIST System
+      IsActive   (true | false)   "false"
+      Platform   (Axcess | Netlinx)   "Axcess"
+      Transport   (Serial | Modem | TCPIP) "Serial"
+      TransportEx   (Serial | USB | TCPIP | VNM) "Serial">
+
+<!ELEMENT SysID (#PCDATA)>
+<!ELEMENT TransSerial (#PCDATA)>
+<!ELEMENT TransTCPIP (#PCDATA)>
+<!ELEMENT TransTCPIPEx (#PCDATA)>
+<!ELEMENT TransSerialEx (#PCDATA)>
+<!ELEMENT TransUSBEx (#PCDATA)>
+<!ELEMENT TransVNMEx (#PCDATA)>
+<!ELEMENT VNMSystemID (#PCDATA)>
+<!ELEMENT VNMIPAddress (#PCDATA)>
+<!ELEMENT VNMMaskAddress (#PCDATA)>
+<!ELEMENT VirtualNetLinxMasterFlag (#PCDATA)>
+<!ELEMENT UserName (#PCDATA)>
+<!ELEMENT Password (#PCDATA)>
+
+
+<!ELEMENT File ( Identifier,
+               FilePathName,
+               Comments?,
+               MasterDirectory?,
+               DeviceMap*,
+               IRDB*)>
+
+<!ATTLIST File 
+       Type (Source | MasterSrc | Include | Module | AXB | IR | TPD | TP4 | TP5 | KPD | TKO | AMX_IR_DB | IRN_DB | Other | DUET | TOK | TKN | KPB | XDD ) "Other"
+       CompileType (Axcess | Netlinx | None) "None"> 
+
+<!ELEMENT FilePathName	(#PCDATA)>
+                            
+<!ELEMENT DeviceMap (DevName)>
+       <!ATTLIST DeviceMap DevAddr CDATA #REQUIRED>
+
+       <!ELEMENT DevName (#PCDATA)>
+
+<!ELEMENT IRDB    (Property,
+                 DOSName,
+                 UserDBPathName,
+                 Notes)>
+       <!ATTLIST IRDB DBKey CDATA #REQUIRED>
+
+       <!ELEMENT Property (#PCDATA)>
+       <!ELEMENT DOSName (#PCDATA)>
+       <!ELEMENT UserDBPathName (#PCDATA)>
+       <!ELEMENT Notes (#PCDATA)>
+]>
+
+<Workspace CurrentVersion="4.0"><Identifier>Bunge World HQ North America</Identifier>
+<CreateVersion>4.0</CreateVersion>
+<PJS_File></PJS_File>
+<PJS_ConvertDate></PJS_ConvertDate>
+<PJS_CreateDate></PJS_CreateDate>
+<Comments></Comments>
+<Project><Identifier>1st Floor</Identifier>
+<Designer></Designer>
+<DealerID></DealerID>
+<SalesOrder></SalesOrder>
+<PurchaseOrder></PurchaseOrder>
+<Comments></Comments>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm143 XL Conference Rm</Identifier>
+<SysID>143</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.31|1319|1|143||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge XL Conf rev 04</Identifier>
+<FilePathName>Bunge XL Conf rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm144 XL Conference Rm</Identifier>
+<SysID>144</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.34|1319|1|144||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge XL Conf rev 04</Identifier>
+<FilePathName>Bunge XL Conf rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm145 Small Conference Room Type2</Identifier>
+<SysID>145</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.37|1319|1|145||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm146 Medium Conference Room Type1</Identifier>
+<SysID>146</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.40|1319|1|146||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Medium Conf Type1 rev 03</Identifier>
+<FilePathName>Bunge Medium Conf Type1 rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm147 Medium Conference Room Type1</Identifier>
+<SysID>147</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.43|1319|1|147||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Medium Conf Type1 rev 03</Identifier>
+<FilePathName>Bunge Medium Conf Type1 rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm148 Small Conference Room Type2</Identifier>
+<SysID>148</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.46|1319|1|148||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm152 Large VTC Conf (Medium Type 2)</Identifier>
+<SysID>152</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.56|1319|1|152||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Medium VTC Conference Type 2 rev 04</Identifier>
+<FilePathName>Medium VTC Conference Type 2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm154 Small Conference Room Type2</Identifier>
+<SysID>154</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.60|1319|1|154||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm155 Large Conference</Identifier>
+<SysID>155</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.63|1319|1|155||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Large Conference Rm155&amp;156 rev 03</Identifier>
+<FilePathName>Bunge Large Conference Rm155&amp;156 rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm156 Large Conference</Identifier>
+<SysID>156</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.66|1319|1|156||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Large Conference Rm155&amp;156 rev 03</Identifier>
+<FilePathName>Bunge Large Conference Rm155&amp;156 rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm157 Medium Conference Room Type1</Identifier>
+<SysID>157</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.69|1319|1|157||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Medium Conf Type1 rev 03</Identifier>
+<FilePathName>Bunge Medium Conf Type1 rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+</Project>
+<Project><Identifier>2nd Floor</Identifier>
+<Designer></Designer>
+<DealerID></DealerID>
+<SalesOrder></SalesOrder>
+<PurchaseOrder></PurchaseOrder>
+<Comments></Comments>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm244 Medium VTC Conference Type 2</Identifier>
+<SysID>244</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.84|1319|1|244||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="Other"><Identifier>Cisco SX80 CE FW with SSH Interface</Identifier>
+<FilePathName>Cisco SX80 CE FW with SSH Interface.doc</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Medium VTC Conference Type 2 rev 04</Identifier>
+<FilePathName>Medium VTC Conference Type 2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="Other"><Identifier>SamsungDM55E Interface</Identifier>
+<FilePathName>SamsungDM55E Interface.doc</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm245 Medium VTC Conference Type 2</Identifier>
+<SysID>245</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.88|1319|1|245||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Medium VTC Conference Type 2 rev 04</Identifier>
+<FilePathName>Medium VTC Conference Type 2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm246 Small Conference Room Type1</Identifier>
+<SysID>246</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.92|1319|1|246||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm247 Small Conference Room Type1</Identifier>
+<SysID>247</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.95|1319|1|247||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+</Project>
+<Project><Identifier>3rd Floor</Identifier>
+<Designer></Designer>
+<DealerID></DealerID>
+<SalesOrder></SalesOrder>
+<PurchaseOrder></PurchaseOrder>
+<Comments></Comments>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm315 Small VTC Interview Room</Identifier>
+<SysID>315</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.101|1319|1|315||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Interview Room rev 04</Identifier>
+<FilePathName>Bunge Interview Room rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX10_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX10_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm314 Small VTC Interview Room</Identifier>
+<SysID>314</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.98|1319|1|314||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Interview Room rev 04</Identifier>
+<FilePathName>Bunge Interview Room rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="Other"><Identifier>Cisco SX10 CE FW with SSH Interface</Identifier>
+<FilePathName>Cisco SX10 CE FW with SSH Interface.doc</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX10_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX10_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="Other"><Identifier>SamsungDM55E Interface</Identifier>
+<FilePathName>SamsungDM55E Interface.doc</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm318 Small Conference Room Type1</Identifier>
+<SysID>318</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.104|1319|1|318||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm323 Medium VTC Conference Type 2</Identifier>
+<SysID>323</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.107|1319|1|323||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Medium VTC Conference Type 2 rev 04</Identifier>
+<FilePathName>Medium VTC Conference Type 2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm344 Medium VTC Conference Type 2</Identifier>
+<SysID>344</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.111|1319|1|344||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Medium VTC Conference Type 2 rev 04</Identifier>
+<FilePathName>Medium VTC Conference Type 2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm345 Medium Conference Room Type1</Identifier>
+<SysID>345</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.115|1319|1|345||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Medium Conf Type1 rev 03</Identifier>
+<FilePathName>Bunge Medium Conf Type1 rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm346 Small Conference Room Type1</Identifier>
+<SysID>346</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.118|1319|1|346||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm347 Small Conference Room Type1</Identifier>
+<SysID>347</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.121|1319|1|347||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm348 Audit Room</Identifier>
+<SysID>348</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.124|1319|1|348||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Audit Room rev 04</Identifier>
+<FilePathName>Bunge Audit Room rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+</Project>
+<Project><Identifier>4th Floor</Identifier>
+<Designer></Designer>
+<DealerID></DealerID>
+<SalesOrder></SalesOrder>
+<PurchaseOrder></PurchaseOrder>
+<Comments></Comments>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm420 Small VTC Room</Identifier>
+<SysID>420</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.126|1319|1|420||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Interview Room rev 04</Identifier>
+<FilePathName>Bunge Interview Room rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX10_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX10_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm428 Medium Conference Room Type1</Identifier>
+<SysID>428</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.129|1319|1|428||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Medium Conf Type1 rev 03</Identifier>
+<FilePathName>Bunge Medium Conf Type1 rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm432 Executive VTC Conference (Medium Type2)</Identifier>
+<SysID>432</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.132|1319|1|432||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Medium VTC Conference Type 2 rev 04</Identifier>
+<FilePathName>Medium VTC Conference Type 2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm444 Medium VTC Conference Type 2</Identifier>
+<SysID>444</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.136|1319|1|444||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Medium VTC Conference Type 2 rev 04</Identifier>
+<FilePathName>Medium VTC Conference Type 2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm445 Medium Conference Room Type1</Identifier>
+<SysID>445</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.140|1319|1|445||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Medium Conf Type1 rev 03</Identifier>
+<FilePathName>Bunge Medium Conf Type1 rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm446 Small Conference Room Type1</Identifier>
+<SysID>446</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.143|1319|1|446||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm447 Small Conference Room Type1</Identifier>
+<SysID>447</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.146|1319|1|447||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Small Conf Room Types1&amp;2 rev 04</Identifier>
+<FilePathName>Bunge Small Conf Room Types1&amp;2 rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm448 Medium Conf Room Type3</Identifier>
+<SysID>448</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.149|1319|1|448||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge Medium VTC Conf Type3 rev 03</Identifier>
+<FilePathName>Bunge Medium VTC Conf Type3 rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM55E_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM55E_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+</Project>
+<Project><Identifier>Large AV Systems</Identifier>
+<Designer></Designer>
+<DealerID></DealerID>
+<SalesOrder></SalesOrder>
+<PurchaseOrder></PurchaseOrder>
+<Comments></Comments>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm128 BOARDROOM Switcher</Identifier>
+<SysID>129</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.73|1319|1|128 Boardroom Switcher||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>blank</Identifier>
+<FilePathName>blank.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="USB"><Identifier>Rm128 BOARDROOM Master</Identifier>
+<SysID>128</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.72|1319|1|150 Boardroom Master||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>NX-1200|NX-1200-226|210601GX19H0657|00:60:9f:a2:c9:01||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="Include"><Identifier>BSS_Soundweb_London</Identifier>
+<FilePathName>BSS_Soundweb_London.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="TP4"><Identifier>Bunge - J16011247 - Boardroom 128 - IPAD,rev 08</Identifier>
+<FilePathName>Bunge - J16011247 - Boardroom 128 - IPAD,rev 08.TP4</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="Source"><Identifier>Bunge - J16011247 - Boardroom 128,rev 02</Identifier>
+<FilePathName>Bunge - J16011247 - Boardroom 128,rev 02.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="Source"><Identifier>Bunge - J16011247 - Boardroom 128,rev 03</Identifier>
+<FilePathName>Bunge - J16011247 - Boardroom 128,rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge - J16011247 - Boardroom 128,rev 04</Identifier>
+<FilePathName>Bunge - J16011247 - Boardroom 128,rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>NEC_E905_Comm_dr1_0_0</Identifier>
+<FilePathName>NEC_E905_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Surgex_iControl2_dr1_0_0</Identifier>
+<FilePathName>Surgex_iControl2_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="true" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm137 138 139 LARGE TRAINING Master</Identifier>
+<SysID>137</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>198.18.0.1|1319|1|ICS Lan||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments>CHANGE TO 137 ON SITE</Comments>
+<File CompileType="Netlinx" Type="Include"><Identifier>BSS_Soundweb_London</Identifier>
+<FilePathName>BSS_Soundweb_London.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="TP4"><Identifier>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 09</Identifier>
+<FilePathName>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 09.TP4</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="TP4"><Identifier>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 10</Identifier>
+<FilePathName>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 10.TP4</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="TP4"><Identifier>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 11</Identifier>
+<FilePathName>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 11.TP4</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="TP4"><Identifier>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 12</Identifier>
+<FilePathName>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 12.TP4</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="TP4"><Identifier>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 13</Identifier>
+<FilePathName>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 13.TP4</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="TP4"><Identifier>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 14</Identifier>
+<FilePathName>Bunge - J16011247 - Large Training 137-139 - MSD1001,rev 14.TP4</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvTP1"><DevName>dvTP1</DevName>
+</DeviceMap>
+<DeviceMap DevAddr="dvTP2"><DevName>dvTP2</DevName>
+</DeviceMap>
+<DeviceMap DevAddr="dvTP3"><DevName>dvTP3</DevName>
+</DeviceMap>
+</File>
+<File CompileType="Netlinx" Type="Source"><Identifier>Bunge - J16011247 - Large Training 137-139,rev 12</Identifier>
+<FilePathName>Bunge - J16011247 - Large Training 137-139,rev 12.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge - J16011247 - Large Training 137-139,rev 13</Identifier>
+<FilePathName>Bunge - J16011247 - Large Training 137-139,rev 13.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Surgex_iControl2_dr1_0_0</Identifier>
+<FilePathName>Surgex_iControl2_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm137 138 139 LARGE TRAINING Switcher</Identifier>
+<SysID>138</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.27|1319|1|137 138 139 Large Training Switcher||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>blank</Identifier>
+<FilePathName>blank.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm150 SMALL TRAINING Master</Identifier>
+<SysID>150</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.49|1319|1|150 Small Training Master||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="Include"><Identifier>BSS_Soundweb_London</Identifier>
+<FilePathName>BSS_Soundweb_London.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="TP4"><Identifier>Bunge - J16011247 - Small Training 150 - MSD1001,rev 06</Identifier>
+<FilePathName>Bunge - J16011247 - Small Training 150 - MSD1001,rev 06.TP4</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvTP1"><DevName>dvTP1</DevName>
+</DeviceMap>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge - J16011247 - Small Training Room 150,rev 01</Identifier>
+<FilePathName>Bunge - J16011247 - Small Training Room 150,rev 01.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Cisco_SX80_CE_Comm_dr1_0_0</Identifier>
+<FilePathName>Cisco_SX80_CE_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_DM82D_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_DM82D_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Surgex_iControl2_dr1_0_0</Identifier>
+<FilePathName>Surgex_iControl2_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="TCPIP"><Identifier>Rm150 SMALL TRAINING Switcher</Identifier>
+<SysID>151</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.51|1319|1|150 Small Training Switcher||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>|||||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>blank</Identifier>
+<FilePathName>blank.axs</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+<System IsActive="false" Platform="Netlinx" Transport="Serial" TransportEx="USB"><Identifier>Rm226 Exercise and 108 Dining</Identifier>
+<SysID>226</SysID>
+<TransTCPIP>0.0.0.0</TransTCPIP>
+<TransSerial>COM1,115200,8,None,1,None</TransSerial>
+<TransTCPIPEx>10.160.208.77|1319|1|226 Exercise 108 Dining||</TransTCPIPEx>
+<TransSerialEx>COM1|38400|8|None|1|None||</TransSerialEx>
+<TransUSBEx>NX-1200|NX-1200-226|210601GX19H0657|00:60:9f:a2:c9:01||</TransUSBEx>
+<TransVNMEx>10.0.0.1|1|&lt;Default&gt;</TransVNMEx>
+<VirtualNetLinxMasterFlag>false</VirtualNetLinxMasterFlag>
+<VNMSystemID>1</VNMSystemID>
+<VNMIPAddress>10.0.0.1</VNMIPAddress>
+<VNMMaskAddress>255.255.255.0</VNMMaskAddress>
+<UserName></UserName>
+<Password></Password>
+<Comments></Comments>
+<File CompileType="Netlinx" Type="Include"><Identifier>BSS_Soundweb_London</Identifier>
+<FilePathName>BSS_Soundweb_London.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="Source"><Identifier>Bunge - J16011247 - Exercise Room 226,Dining Room 108,rev 03</Identifier>
+<FilePathName>Bunge - J16011247 - Exercise Room 226,Dining Room 108,rev 03.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="MasterSrc"><Identifier>Bunge - J16011247 - Exercise Room 226,Dining Room 108,rev 04</Identifier>
+<FilePathName>Bunge - J16011247 - Exercise Room 226,Dining Room 108,rev 04.axs</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="TP4"><Identifier>Bunge - J16011247 - Exercise, Dining - MSD1001,rev 07</Identifier>
+<FilePathName>Bunge - J16011247 - Exercise, Dining - MSD1001,rev 07.TP4</FilePathName>
+<Comments></Comments>
+<DeviceMap DevAddr="dvTP1"><DevName>dvTP1</DevName>
+</DeviceMap>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Samsung_QM85D_Comm_dr1_0_0</Identifier>
+<FilePathName>Samsung_QM85D_Comm_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="DUET"><Identifier>Surgex_iControl2_dr1_0_0</Identifier>
+<FilePathName>Surgex_iControl2_dr1_0_0.jar</FilePathName>
+<Comments></Comments>
+</File>
+</System>
+</Project>
+</Workspace>

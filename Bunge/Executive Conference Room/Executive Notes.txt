@@ -1,0 +1,84 @@
+INTEGER ProgramAudioLevel			=		0;
+INTEGER ProgramAudioMute			=		0;
+INTEGER InboundAudioLevel			=		0;
+INTEGER	InboundAudioMute			=		0;
+INTEGER LapelMicLevel				=		0;
+INTEGER LapelMicMute				=		0;
+INTEGER HandHeldMicLevel			=		0;
+INTEGER HandHeldMicMute				=		0;
+
+    Char	VProgramAudioLevel[]	=	"TProgramAudioName";
+    Char	VProgramAudioMute[]	=	"TProgramAudioMute";
+    Char	VInvoundAudioLevel[]	=	"TInvoundAudioLevel";
+    Char	VInboudAudioMute[]	=	"TInboudAudioMute";
+    Char	VLapelMicLevel[]	=	"TLapelMicLevel";
+    Char	VLapelMicMute[]		=	"TLapelMicMute";
+    Char	VHandHeldMicLevel[]	=	"THandHeldMicLevel";
+    Char	VHandHeldMicMute[]	=	"THandHeldMicMute";
+
+get Goose1.Gain\x0A		Get Level
+csv Goose1.Gain -20\x0A		Level
+csp Goose1.Mute 1\x0A
+
+Replies
+cv "TProgramAudioName" "-20.0dB" 020 0.35\x0D\x0A
+cv 'TProgramAudioMute' 'unmuted' 0 0\x0D\x0A
+
+VOLUME UP
+ PUSH:
+    {
+	IF(HandHeldMicLevel < MaxLevelForIncrease)
+	{
+	    HandHeldMicLevel = HandHeldMicLevel + MicChangeLevel;
+	    //SEND_STRING dvDSP,'csv VHandHeldMicLevel HandHeldMicLevel\x0A';
+	    SEND_STRING dvDSP,"'csv ',VHandHeldMicLevel,' ',HandHeldMicLevel,$0A";
+	}
+    }
+    HOLD[500,REPEAT]:
+    {
+	IF(HandHeldMicLevel < MaxLevelForIncrease)
+	{
+	    HandHeldMicLevel = HandHeldMicLevel + MicChangeLevel;
+	    //SEND_STRING dvDSP,'csv VHandHeldMicLevel HandHeldMicLevel\x0A';
+	    SEND_STRING dvDSP,"'csv ',VHandHeldMicLevel,' ',HandHeldMicLevel,$0A";
+	}
+    }
+
+Volume DOWN
+ PUSH:
+    {
+	IF(HandHeldMicLevel < MinLevelForDecrease)
+	{
+	    HandHeldMicLevel = HandHeldMicLevel + MicChangeLevel;
+	    //SEND_STRING dvDSP,'csv VHandHeldMicLevel HandHeldMicLevel\x0A';
+	    SEND_STRING dvDSP,"'csv ',VHandHeldMicLevel,' ',HandHeldMicLevel,$0A";
+	}
+    }
+    HOLD[500,REPEAT]:
+    {
+	IF(HandHeldMicLevel < MinLevelForDecrease)
+	{
+	    HandHeldMicLevel = HandHeldMicLevel + MicChangeLevel;
+	    //SEND_STRING dvDSP,'csv VHandHeldMicLevel HandHeldMicLevel\x0A';
+	    SEND_STRING dvDSP,"'csv ',VHandHeldMicLevel,' ',HandHeldMicLevel,$0A";
+	}
+     }    
+
+
+
+MUTE
+
+ PUSH:
+    {
+	IF(HandHeldMicMute = 1)
+	{
+	    //SEND_STRING dvDSP,'csp VHandHeldMicMute 0\x0A';
+	    SEND_STRING dvDSP,"'csp ',VHandHeldMicLevel,'0'$0A";
+	}
+	ELSE IF(HandHeldMicMute = 0)
+	{
+	     //SEND_STRING dvDSP,'csp VHandHeldMicMute 1\x0A'
+	     SEND_STRING dvDSP,"'csp ',VHandHeldMicLevel,'1'$0A";
+	     
+	}
+    }

@@ -1,0 +1,23 @@
+#Thu Nov 15 12:01:02 GMT 2018
+Device-Class=com.amx.duet.impl.surgex.icontrol2.dr1_0_0.Surgex_iControl2
+Manifest-Version=1.0.0
+Device-Make=Surgex
+Bundle-Activator=com.amx.duet.impl.surgex.icontrol2.dr1_0_0.Activator
+Device-Revision=1.0.0
+File-Dependencies=devicesdkrt.jar; specification-version\=1.15.0,snapirouter.jar; specification-version\=1.15.0
+Bundle-Vendor=AMX Corporation
+Device-SDKClass=com.amx.duet.devicesdk.UPS
+Device-SDKInterface=com.amx.duet.devicesdk.IUPS
+Device-Channels=255
+Device-Levels=8
+Export-Package=com.amx.duet.impl.surgex.icontrol2.dr1_0_0; specification-version\=1.0.0,com.amx.duet.tools.comm.surgex.icontrol2.dr1_0_0; specification-version\=1.0.0,com.amx.duet.tools.io.surgex.icontrol2.dr1_0_0; specification-version\=1.0.0,com.amx.duet.tools.lang.surgex.icontrol2.dr1_0_0; specification-version\=1.0.0,com.amx.duet.tools.math.surgex.icontrol2.dr1_0_0; specification-version\=1.0.0,com.amx.duet.tools.net.tcp.surgex.icontrol2.dr1_0_0; specification-version\=1.0.0,com.amx.duet.tools.text.surgex.icontrol2.dr1_0_0; specification-version\=1.0.0,com.amx.duet.tools.util.surgex.icontrol2.dr1_0_0; specification-version\=1.0.0
+Bundle-Version=1.0.0
+Bundle-Name=Surgex_iControl2_dr1_0_0
+Import-Package=org.osgi.service.http; specification-version\=1.1,org.osgi.service.device; specification-version\=1.0.1,com.amx.duet.driver; specification-version\=1.0.1,com.amx.duet.core.osgi; specification-version\=1.0.1,com.amx.duet.da; specification-version\=1.0.2,com.amx.duet.util.metadata; specification-version\=1.0.1,com.amx.duet.util; specification-version\=1.0.1,com.amx.duet.devicesdk; specification-version\=1.15.0,com.amx.duet.devicesdk.base; specification-version\=1.15.0,com.amx.duet.devicesdk.component; specification-version\=1.15.0,com.amx.duet.devicesdk.type; specification-version\=1.15.0
+Device-Model=iControl2
+Duet-Firmware-Version=v3.21.343
+Router-Service=com.amx.duet.routers.snapi.ISNAPIRouter
+DynamicImport-Package=*
+Bundle-Copyright=(C) Copyright AMX Corp. 2004-2007. All Rights Reserved.
+AMX-Type=Duet
+Device-Category=ip,serial,rs-232
